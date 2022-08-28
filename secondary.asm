@@ -29,7 +29,7 @@
         inc bx
         inc cx
     %%end_read:
-    print_new_line
+
 %endmacro
 
 ;Imprime un "new line" en pantalla
@@ -47,11 +47,48 @@
     int 0x10
 %endmacro
 
-%macro comp_char 1
-    mov ah, "a"
-    mov al, [%1]
-    cmp al, ah
+;Loop que imprime muchas new lines
+%macro clear_screen 0
+
+    mov cx, 40
+    %%loop_clear:
+        cmp cx, 20
+        jz %%end_loop
+        dec cx
+        print_new_line
+        jmp %%loop_clear
+    %%end_loop:
+        print_new_line
 %endmacro
+
+
+
+
+
+
+
+
+
+;no sirve por el momento 
+ %macro comp_char 1
+    xor ax, ax 
+    mov ax, "a"
+    xor bx, bx
+    mov bx, [%1]
+    cmp ax, bx
+    jz %%correctKey
+    clear_screen
+    
+    incorrecKey: db"tecla incorrecta",0
+    mov si, incorrecKey
+    print incorrecKey
+    
+    %%correctKey:
+    keyCorrect: db "Ha presionado la letra correcta",0
+    mov si, keyCorrect
+    print keyCorrect
+%endmacro
+
 
 ;Limpia registros
 %macro clean_registers 0
