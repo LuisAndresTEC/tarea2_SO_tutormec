@@ -4,14 +4,13 @@ org 0x7C00
 start:
     jmp main
     init_message:   db "    tutormek   ", 10,0X0D\,
-                    db "a", 10,0X0D\,
+                    db "      l        a", 10,0X0D\,
                     db " _    _     _     _    _   ", 10,0X0D\,
                     db "| |  | |   | |   | |  | |  ", 10,0X0D\,
                     db "| |  | |   | |   | |  | |  ", 10,0X0D\,
                     db "Para precionar la tecla utilica su dedo meñique ", 0
 
     buffer: times 10 db 0,0
-    ;none: db "",0
 
 main: 
     print init_message

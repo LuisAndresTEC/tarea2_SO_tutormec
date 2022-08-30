@@ -1,4 +1,4 @@
-# Documentación Tarea #1
+# Documentación Tarea #2
 
 #### Luis Andrés Rojas Murillo.
 
@@ -6,52 +6,59 @@
 
 ## Introducción:
 
-​	En esta tarea se especifica la creación de un rastreador de llamadas del sistema con dos modalidades, una donde simplemente se recibe el comando de llamada y se ejecuta mostrando todos las llamadas subsecuentes generadas a raíz de la llamada primaria, por otro lado en el segunda instrucción se esperan poder desplegar de igual forma todas llamadas subsecuentes generadas por una llamada primaria, no obstante con la particularidad de que la ejecución de este proceso va a ser controlada por el usuario o mejor dicho entrando en un estado de espera posterior a cada llamado, del cual solo puede salir cunado el usuario presione una tecla.
+​	En esta tarea se va a a desarrollar el tutor de mecanografía llamado Tutormec el cual se desenvolverá como un sistema operativo a nivel mas primitivo de la maquina, booteando desde una memoria usb
 
 ## Ambiente de desarrollo
 
 - **Visual studio code**: como IDLE para la creación del código.
 - **GitHub**: como repositorio de trabajo.
+- **BIOS**: Como ambiente para correr el código 
 - Y otras mas, que se detallarán al finalizar la tarea.
 
 ## Estructuras de datos y funciones
 
-- Funciones:
-  - `fragmentador(*opcion*: String) -> Vec<String>`: Esta función permite validar las entradas registras por el usuario y las convierte al formato de vector la colección de palabras introducidas.
-  - `entrada_texto() -> String`: Esta es una función auxiliar que permite registrar la entrada de texto por parte del usuario y retorna una cadena de String.
-  - `ejecuta_binario(*opcion*:String)`esta es una funciona alterna que funciona como enlace final con el sistema operativo a la hora de ejecutar los binarios.
-  - `menu_tracker_v(*binario*: String)`: Sub-menú después del main el cual ejecuta los procesos individuales según la elección de procesos dada por el usuario, en esta caso para el proceso con la entrada -v.
-  - `menu_tracker_V(*binario*: String)`:Sub-menú después del main el cual ejecuta los procesos individuales según la elección de procesos dada por el usuario, en esta caso para el proceso con la entrada -V.
-  - `presiona_tecla()`:Función auxiliar al proceso de -V ya que permite registrar las entradas necesarias para la ejecución de la tarea.
-  - `rastreador_V(*child*: Pid)-> Vec<String>` : Función encargada del proceso de impresión de los resultados o subprocesos detonados durante la ejecución de una consulta y de la demás logística que pueda incluir, en este caso esta es la función encarga de la opción -V.
-  - `rastreador_v(*child*: Pid)-> Vec<String>`: Función encargada del proceso de impresión de los resultados o subprocesos detonados durante la ejecución de una consulta y de la demás logística que pueda incluir, en este caso esta es la función encarga de la opción -v.
-  - `reps_counter_hash`:Función principal para la cuenta de repeticiones en el las llamadas
-  - `reps_counter_hash_verifier`:Función secundaria de `reps_counter_hash` que se encarga de verificar que no se vaya a contar 2 veces la misma llamada o llamadas con el mismo nombre
-  - `reps_counter_hash_aux`:Función secundaria de `reps_counter_hash` que se encarga de contar las veces que se utilizó una llamada en específico
-  - `reps_counter_hash_printer`:Función secundaria de `reps_counter_hash` que se encarga de imprimir la matriz generada sobre la incidencia de uso de las llamadas durante una ejecución.
-  - `main()`:función principal del programa y coordinadora general de todas las funcionalidades.
+- Funciones o Macros:
+  - `print`: Imprime las estructuras que se le pasen por parámetro.
+  - `input_character`: Capta un caracter de la consola.
+  - `input`: función que dirige el proceso de captar inputs.
+  - `print_new_line`: función que imprimen o genera una linea vacía en la pantalla.
+  - `print_char`: recibe un caracter como parámetro y lo imprime.
+  - `clear_screen`: Macro que limpia la pantalla por completo.
+  - `comp_char`: Macro que compara dos caracteres
+  - `start`: función que configura datos de arranque 
+  - `main`: función principal
 
 - **Estructuras**
-  - **Vectores**: Se utilizaron vectores como valores de retorno de las aplicaciones y como directorios para la manipulación y transferencia de los datos 
-    - **String** 
-    - **String , enteros** 
+  - **Funciones**
+  - **Macros**
 
 
 ## Instrucciones para ejecutar el programa
 
-1. compilar el proyecto.
+1. Compilar el proyecto.
 
-2. Administrar el comando segun la infomacipon que desee obtener, siguiendo la sintaccions de consulta establecida.
+   1. Para compilar se debe de ejecutar el siguiente comando 
 
-   1. Ejemplo del formato 
+       		`nasm -f bin NombreArchivo.asm -o NombreArchivo.bin`
 
-      `rastreador [opciones rastreador] Prog [opciones de Prog]`
+2. Se copia el binario en la memoria USB.
 
-   2. En caso de haber seleccionado la opción de -V, presionar cualquier tecla para detonar cada uno de los subprocesos.
+   1. Para copiar se debe de ejecutar el siguiente comando.
 
-3. Observar los resultados de la ejecución.
+   2. Desde la ubicación donde se encuentra el archivo binario.
 
-4. Analizar las métricas o cálculos generados a raíz de la ejecución.			
+      ​        `sudo dd if=NombreArchivo.bin of= Direccion del puerto de la memoria`
+   
+3.      Se pone a reiniciar la computadora
+
+3.      Se pone en modo heredado 
+
+3.      Se pone como prioridad de arranque la memoria usb en el puesto número 1 
+
+3.      Y en teoría la pc deberia de bootear sobre la memoria y mostrar el proyecto 
+
+      ​																																																																							
+
 
 ## Actividades realizadas por el estudiante
 
