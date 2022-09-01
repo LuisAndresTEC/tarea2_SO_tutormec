@@ -61,16 +61,19 @@
 
 ## Actividades realizadas por el estudiante
 
-| Fecha      | Hora inicio | Hora final | Cantidad de horas | Descripción                                      |
-| ---------- | ----------- | ---------- | ----------------- | ------------------------------------------------ |
-| 23/08/2022 | 19:00       | 21:00      | 2:00              | Investigación sobre como hacer que la usb bootee |
-| 24/08/2022 | 19:00       | 20:30      | 1:30              | Investigación y prueba del booteo                |
-| 25/08/2022 | 17:00       | 18:30      | 1:30              | Establecimiento formal de booteo                 |
-| 26/08/2022 | 18:30       | 22:00      | 3:30              | Investigación y experimentación                  |
-| 27/08/2022 | 8:00        | 12:00      | 4:00              | desarrollo inicial del tutormec                  |
-| 27/08/2022 | 13:30       | 18:00      | 1:30              | desarrollo de tutormec                           |
-| 27/08/2022 | 21:00       | 22:00      | 1:00              | Corrección de errores y commit de validación     |
-| 29/08/2022 | 18:00       | 21:00      | 3:00              | Conclusión d la documentación                    |
+| Fecha              | Hora inicio | Hora final | Cantidad de horas | Descripción                                              |
+| ------------------ | ----------- | ---------- | ----------------- | -------------------------------------------------------- |
+| 23/08/2022         | 19:00       | 21:00      | 2:00              | Investigación sobre como hacer que la usb bootee         |
+| 24/08/2022         | 19:00       | 20:30      | 1:30              | Investigación y prueba del booteo                        |
+| 25/08/2022         | 17:00       | 18:30      | 1:30              | Establecimiento formal de booteo                         |
+| 26/08/2022         | 18:30       | 22:00      | 3:30              | Investigación y experimentación                          |
+| 27/08/2022         | 8:00        | 12:00      | 4:00              | desarrollo inicial del tutormec                          |
+| 27/08/2022         | 13:30       | 18:00      | 1:30              | desarrollo de tutormec                                   |
+| 27/08/2022         | 21:00       | 22:00      | 1:00              | Corrección de errores y commit de validación             |
+| 30/08/2022         | 17:00       | 19:00      | 2:00              | Corrige problema sobre la impresion a la hora de bootear |
+| 31/08/2022         | 19:00       | 20:00      | 1:00              | Se unifican los dos archivos que existían a solo uno     |
+| 29/08/2022         | 18:00       | 21:00      | 3:00              | Conclusión de la documentación                           |
+| **Total de horas** |             |            | 21:00             |                                                          |
 
 
 
@@ -90,7 +93,13 @@
 
 ### Reporte de commits: 
 
-commit 13bda6b15f4336831f3ffdca83c69c2512d3eb6a (HEAD -> main, origin/main)
+commit 0d30713f53d8bf4df64780425a907633ad6fea90 (HEAD -> main, origin/main)
+Author: LuisAndresTEC <lrojasmurillo7@estudiantec.cr>
+Date:   Wed Aug 31 19:44:39 2022 -0600
+
+    Unificación de archivos
+
+commit 13bda6b15f4336831f3ffdca83c69c2512d3eb6a
 Author: LuisAndresTEC <lrojasmurillo7@estudiantec.cr>
 Date:   Mon Aug 29 20:14:19 2022 -0600
 
